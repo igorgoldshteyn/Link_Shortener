@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.MicroserviceSpringApp</groupId>
-	<artifactId>client-interface</artifactId>
+	<artifactId>client-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>client-interface</name>
-	<description>Client interface</description>
+	<name>client-service</name>
+	<description>Client service</description>
 	<properties>
 		<java.version>21</java.version>
 	</properties>

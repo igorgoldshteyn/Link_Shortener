@@ -12,17 +12,12 @@ public class LinkShortenerService {
     ShortenedLinkRepository shortenedLinkRepository;
 
     public Optional<ShortenedLink> getShortenedLinkByOriginalLink(String link){
-        Optional<ShortenedLink> shortenedLink = shortenedLinkRepository.getShortenedLinkByOriginalLink(link);
-    return shortenedLink;
+        return shortenedLinkRepository.getShortenedLinkByOriginalLink(link);
     }
 
     public ShortenedLink getShortenedLink(String originalLink){
         Optional<ShortenedLink> shortenedLink = getShortenedLinkByOriginalLink(originalLink);
-        if(shortenedLink.isPresent()){
-            return shortenedLink.get();
-        }else{
-            return shortALink(originalLink);
-        }
+        return shortenedLink.orElseGet(() -> shortALink(originalLink));
     }
 
     public ShortenedLink shortALink(String link){
@@ -41,8 +36,8 @@ public class LinkShortenerService {
     }
 
 
-    private encryptPassword(String password){
-        PasswordEncoder passwordEncoder =
-                PasswordEncoderFactories.createDelegatingPasswordEncoder();
-    }
+//    private encryptPassword(String password){
+//        PasswordEncoder passwordEncoder =
+//                PasswordEncoderFactories.createDelegatingPasswordEncoder();
+//    }
 }
