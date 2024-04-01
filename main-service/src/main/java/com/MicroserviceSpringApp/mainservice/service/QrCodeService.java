@@ -4,16 +4,10 @@ import org.springframework.stereotype.Service;
 
 import java.awt.*;
 
+//todo qr code generator logic
 @Service
 public class QrCodeService {
-
-
-//maybe not image
 //    public static Image generateQrCodeFromLink() {
-//
-//    }
-
-//   public static Image generateQrCodeFromLink() {
 //
 //    }
 
